@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Signup() {
   return (
     <div className="d-flex justify-content-center align-items-center bg-secondary vh-100">
@@ -43,11 +45,14 @@ export default function Signup() {
           <button type="submit" className="btn btn-success w-100 rounded-0">
             Register
           </button>
-          <p>Already have an Account</p>
-          <button className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none">
-            Login
-          </button>
         </form>
+        <p>Already have an Account</p>
+        <Link
+          to="/login"
+          className="btn btn-default border w-100 bg-light rounded-0 text-decoration-none"
+        >
+          Login
+        </Link>
       </div>
     </div>
   );
